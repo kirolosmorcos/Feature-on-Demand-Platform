@@ -10,7 +10,7 @@ services:
     image: kiro35morcos/ota-backend:latest
     environment:
       MONGO_URI: ${MONGO_URI:?Set MONGO_URI in your environment}
-      MONGO_DB: ota_db_jessy_new
+      MONGO_DB: ${MONGO_DB:?Set MONGO_DB in your environment}
       HEX_STORAGE_ACCOUNT_NAME: otafirmwarestore
       HEX_STORAGE_CONTAINER_NAME: hexfiles
       HEX_STORAGE_ACCOUNT_KEY: ${HEX_STORAGE_ACCOUNT_KEY:?Set HEX_STORAGE_ACCOUNT_KEY in your environment}
