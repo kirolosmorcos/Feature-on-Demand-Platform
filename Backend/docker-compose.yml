@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+
+  frontend:
+   
+    image: kiro35morcos/ota-frontend:latest
+    ports:
+      - "80:80"
+
+  backend:
+   
+    image: kiro35morcos/ota-backend:latest
+    environment:
+        MONGO_URI: mongodb+srv://ota-app-user:hz3MHusb2eDh_3r@ota-app-cluster.byar5bl.mongodb.net/?appName=ota-app-cluster
+        MONGO_DB: ota_db_jessy_new
+        HEX_STORAGE_ACCOUNT_NAME:   otafirmwarestore
+        HEX_STORAGE_CONTAINER_NAME: hexfiles
+        HEX_STORAGE_ACCOUNT_KEY:    k/SZMEc/w2hfr+gD+8bFbtajhxyctghK1eCdDq4lzrqav321dWgP8nTK0shme89N0Lsog/84Hjze+AStFhExVQ==
+
+        IOTHUB_CONNECTION_STRING: HostName=Deactivation.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=G4NkttAm3SxtDVPXqaMgWTJSlhIBLtpEcAIoTA0KEh4=
+        SERVICE_BUS_CONNECTION:  Endpoint=sb://ota-service-bus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=rebqb149tL57+BtZ6eMoJ3TS3rwEX6D/l+ASbBjB2xk=
+        BUS_QUEUE_NAME : license-expiration-queue
+        INTERNAL_SECRET: 9f4c8e1b7a2d6f0c3e5b9a1d4c7f8e2b6a0d3c5e7f1a9b4d6c8e2f0a3b5d7c1
+        
+        PRIVATE_KEY_PATH: /app/private.pem
+        ISSUER_ID: 2
+
+        JWT_SECRET_KEY: V5m5ySeBBf28d1f9Zfr4KxeGAog1RWDUob9XJ1QFG90
+        
+     
+
+    ports:
+     - "5000:80"

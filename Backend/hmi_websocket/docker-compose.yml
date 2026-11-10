@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  hmi_websocket:
+
+    image: kiro35morcos/ota-hmi-websocket:latest
+
+    environment:
+      BACKEND_SERVER_URL: https://ota-web-app.azurewebsites.net/api
+      VM_EMAIL: websocket_vm@system.local
+      VM_PASSWORD: password123
+
+
+    expose:
+      - "8000"
+
+  nginx:
+
+    image: nginx:latest
+
+    ports:
+      - "443:443"
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs:/etc/nginx/certs
+
+    depends_on:
+      - hmi_websocket

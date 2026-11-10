@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      
+        {
+            "name": "Python Debugger: Remote Attach",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/Backend/website_app/backend_server",
+                    "remoteRoot": "/app"
+                }
+            ]
+        },
+        {
+            "name": "Attach Socket Server",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5679
+            },
+            "pathMappings": [
+                    {
+                    "localRoot": "${workspaceFolder}/Backend/hmi_websocket",
+                    "remoteRoot": "/app"
+                    }
+                ],
+            "justMyCode": false
+        },
+        {
+            "name": "Run Client Socket (Local)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Backend/hmi_server/test_client.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

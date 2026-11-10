@@ -1,0 +1,20 @@
+Commands 
+1.	Enable feature
+
+python feature_management.py --ip 192.168.2.20 enable --task-id 2 --license-id 0xacb01d99 --ecu-id 0x18fe37ae --feature-id 0xe27f --valid-from 0x6A280043 --valid-until 0x6A2804F3 --issuer-id 2 --signature "VJt+zvmlrXeus1iWUgf9vsig9fs/wdrgjih7TotWRPXyk0WsRdD+4iiLlkmufxTkNiuAaOCV9V+Mc1nzeEdzmrcCcFazFM6D3TFhJXQ/co8V6ofuYSUDXnr1kCE3aT/Zc67Q9TWw4jMjPeb7IcG2f2BCIoZvv1x1g4AmYcsKG2URXJpIWxbsRsmvLvwBL9qoOO5CHzOJfRUhaN1h6A1gZPpihOrNDmwPPMUcPmIIKTLUliSFuskObAoqvx/e6QMDSdu3zEVONVh+t0gCj7Bs1vZyVwPd89uCR9ijKcD+2hdP5+AJ2+IzPtUk6ElpYyhC0fYue41G+JYRIb2kp+eC/Q=="
+
+2.	Disable feature
+
+python feature_management.py --ip 192.168.2.20 disable --task-id 2 --license-id 0xacb01d99 --ecu-id 0x18fe37ae --feature-id 0xe27f --valid-from 0x6A280043 --valid-until 0x6A2804F3 --issuer-id 2 --signature "VJt+zvmlrXeus1iWUgf9vsig9fs/wdrgjih7TotWRPXyk0WsRdD+4iiLlkmufxTkNiuAaOCV9V+Mc1nzeEdzmrcCcFazFM6D3TFhJXQ/co8V6ofuYSUDXnr1kCE3aT/Zc67Q9TWw4jMjPeb7IcG2f2BCIoZvv1x1g4AmYcsKG2URXJpIWxbsRsmvLvwBL9qoOO5CHzOJfRUhaN1h6A1gZPpihOrNDmwPPMUcPmIIKTLUliSFuskObAoqvx/e6QMDSdu3zEVONVh+t0gCj7Bs1vZyVwPd89uCR9ijKcD+2hdP5+AJ2+IzPtUk6ElpYyhC0fYue41G+JYRIb2kp+eC/Q=="
+
+3.	Diag set/reset flag
+
+python doip_diag_simple_m.py --ip 192.168.2.20 --test diagnostics
+
+4.     Flashing customize size
+
+python mina_final_optimized_cust_size.py --ip 192.168.2.20 --test download  --block_size 8192 --file cmpc_Z4_0.srec
+
+5. DOTA
+
+python DOTA.py --ip 192.168.2.20  --car-id "mc180a"
