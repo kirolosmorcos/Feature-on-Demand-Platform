@@ -204,7 +204,9 @@ The platform includes a DoTA workflow based on UDS over Ethernet, supporting rem
 
 ## Demo
 
-Demo video: **Add the GitHub-hosted demo link here after uploading it.**
+[![Watch the Feature-on-Demand Platform Demo](https://img.youtube.com/vi/Vcl04SCTCKA/hqdefault.jpg)](https://youtu.be/Vcl04SCTCKA)
+
+[Watch the full demo on YouTube](https://youtu.be/Vcl04SCTCKA)
 
 ## Project Scope
 
